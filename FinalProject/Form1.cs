@@ -14,9 +14,12 @@ namespace FinalProject
 
         private void playButton_Click(object sender, EventArgs e)
         {
+
             Form2 nextForm = new Form2();
             nextForm.Show();
-            this.Close();
+            this.Hide();
         }
+
     }
 }
+
