@@ -29,8 +29,8 @@
         private void InitializeComponent()
         {
             attemptLabel = new Label();
-            label1 = new Label();
-            textBox1 = new TextBox();
+            secretWordLabel = new Label();
+            letterTextBox = new TextBox();
             label2 = new Label();
             SuspendLayout();
             // 
@@ -42,20 +42,20 @@
             attemptLabel.TabIndex = 0;
             attemptLabel.TextAlign = ContentAlignment.MiddleCenter;
             // 
-            // label1
+            // secretWordLabel
             // 
-            label1.Location = new Point(176, 88);
-            label1.Name = "label1";
-            label1.Size = new Size(449, 86);
-            label1.TabIndex = 1;
-            label1.TextAlign = ContentAlignment.MiddleCenter;
+            secretWordLabel.Location = new Point(176, 88);
+            secretWordLabel.Name = "secretWordLabel";
+            secretWordLabel.Size = new Size(449, 86);
+            secretWordLabel.TabIndex = 1;
+            secretWordLabel.TextAlign = ContentAlignment.MiddleCenter;
             // 
-            // textBox1
+            // letterTextBox
             // 
-            textBox1.Location = new Point(383, 323);
-            textBox1.Name = "textBox1";
-            textBox1.Size = new Size(35, 23);
-            textBox1.TabIndex = 2;
+            letterTextBox.Location = new Point(383, 323);
+            letterTextBox.Name = "letterTextBox";
+            letterTextBox.Size = new Size(35, 23);
+            letterTextBox.TabIndex = 2;
             // 
             // label2
             // 
@@ -72,8 +72,8 @@
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(800, 450);
             Controls.Add(label2);
-            Controls.Add(textBox1);
-            Controls.Add(label1);
+            Controls.Add(letterTextBox);
+            Controls.Add(secretWordLabel);
             Controls.Add(attemptLabel);
             Name = "Form2";
             Text = "Hangman";
@@ -85,8 +85,8 @@
         #endregion
 
         private Label attemptLabel;
-        private Label label1;
-        private TextBox textBox1;
+        private Label secretWordLabel;
+        private TextBox letterTextBox;
         private Label label2;
     }
 }
