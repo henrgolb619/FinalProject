@@ -22,20 +22,36 @@ namespace FinalProject
         private void Form2_Load(object sender, EventArgs e)
         {
             string secretWord = GetSecretWord();
-            secretWordLabel.Text = secretWord;
+            secretWordLabel.Text = CreateHiddenWord(secretWord);
         }
 
         string GetSecretWord()
         {
             // array of words with more than 5 letters
-            string[] words = { "computer", "notebook", "student", "program", "science",
-                           "teacher", "library", "morning", "picture", "holiday" };
+            string[] words = { "computer","notebook","student","programming",
+                "science","teacher","library","mountain","adventure","holiday",
+    "electricity","information","technology","imagination","environment"
+};
+
 
             Random random = new Random();
             int index = random.Next(0, words.Length);
 
             return words[index];
         }
+
+        string CreateHiddenWord(string secretWord)
+        {
+            string hiddenWord = "";
+
+            for (int i = 0; i < secretWord.Length; i++)
+            {
+                hiddenWord += "_ ";
+            }
+
+            return hiddenWord;
+        }
+
 
 
     }

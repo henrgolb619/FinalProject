@@ -44,9 +44,10 @@
             // 
             // secretWordLabel
             // 
-            secretWordLabel.Location = new Point(176, 88);
+            secretWordLabel.Font = new Font("Segoe UI", 26.25F, FontStyle.Regular, GraphicsUnit.Point);
+            secretWordLabel.Location = new Point(131, 88);
             secretWordLabel.Name = "secretWordLabel";
-            secretWordLabel.Size = new Size(449, 86);
+            secretWordLabel.Size = new Size(539, 86);
             secretWordLabel.TabIndex = 1;
             secretWordLabel.TextAlign = ContentAlignment.MiddleCenter;
             // 
