@@ -32,6 +32,7 @@
             secretWordLabel = new Label();
             letterTextBox = new TextBox();
             label2 = new Label();
+            inputButton = new Button();
             SuspendLayout();
             // 
             // attemptLabel
@@ -44,12 +45,13 @@
             // 
             // secretWordLabel
             // 
-            secretWordLabel.Font = new Font("Segoe UI", 26.25F, FontStyle.Regular, GraphicsUnit.Point);
+            secretWordLabel.Font = new Font("Yu Gothic", 21.75F, FontStyle.Regular, GraphicsUnit.Point);
             secretWordLabel.Location = new Point(131, 88);
             secretWordLabel.Name = "secretWordLabel";
             secretWordLabel.Size = new Size(539, 86);
             secretWordLabel.TabIndex = 1;
             secretWordLabel.TextAlign = ContentAlignment.MiddleCenter;
+            secretWordLabel.Click += secretWordLabel_Click;
             // 
             // letterTextBox
             // 
@@ -67,11 +69,22 @@
             label2.Text = "Enter a letter.";
             label2.TextAlign = ContentAlignment.MiddleCenter;
             // 
+            // inputButton
+            // 
+            inputButton.Location = new Point(331, 360);
+            inputButton.Name = "inputButton";
+            inputButton.Size = new Size(139, 31);
+            inputButton.TabIndex = 4;
+            inputButton.Text = "Input Letter";
+            inputButton.UseVisualStyleBackColor = true;
+            inputButton.Click += inputButton_Click;
+            // 
             // Form2
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(800, 450);
+            Controls.Add(inputButton);
             Controls.Add(label2);
             Controls.Add(letterTextBox);
             Controls.Add(secretWordLabel);
@@ -89,5 +102,6 @@
         private Label secretWordLabel;
         private TextBox letterTextBox;
         private Label label2;
+        private Button inputButton;
     }
 }
