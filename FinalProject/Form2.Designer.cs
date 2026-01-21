@@ -33,6 +33,8 @@
             letterTextBox = new TextBox();
             label2 = new Label();
             inputButton = new Button();
+            resetButton = new Button();
+            loseLabel = new Label();
             SuspendLayout();
             // 
             // attemptLabel
@@ -79,11 +81,35 @@
             inputButton.UseVisualStyleBackColor = true;
             inputButton.Click += inputButton_Click;
             // 
+            // resetButton
+            // 
+            resetButton.Font = new Font("Yu Gothic", 20.25F, FontStyle.Regular, GraphicsUnit.Point);
+            resetButton.Location = new Point(284, 291);
+            resetButton.Name = "resetButton";
+            resetButton.Size = new Size(233, 100);
+            resetButton.TabIndex = 5;
+            resetButton.Text = "Try Again";
+            resetButton.UseVisualStyleBackColor = true;
+            resetButton.Visible = false;
+            resetButton.Click += resetButton_Click;
+            // 
+            // loseLabel
+            // 
+            loseLabel.Font = new Font("Yu Gothic", 15.75F, FontStyle.Regular, GraphicsUnit.Point);
+            loseLabel.Location = new Point(291, 85);
+            loseLabel.Name = "loseLabel";
+            loseLabel.Size = new Size(218, 85);
+            loseLabel.TabIndex = 6;
+            loseLabel.TextAlign = ContentAlignment.MiddleCenter;
+            loseLabel.Visible = false;
+            // 
             // Form2
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(800, 450);
+            Controls.Add(loseLabel);
+            Controls.Add(resetButton);
             Controls.Add(inputButton);
             Controls.Add(label2);
             Controls.Add(letterTextBox);
@@ -103,5 +129,7 @@
         private TextBox letterTextBox;
         private Label label2;
         private Button inputButton;
+        private Button resetButton;
+        private Label loseLabel;
     }
 }

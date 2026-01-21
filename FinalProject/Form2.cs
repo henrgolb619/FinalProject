@@ -27,7 +27,11 @@ namespace FinalProject
         // runs when the form loads
         private void Form2_Load(object sender, EventArgs ej)
         {
-            
+            loseLabel.Visible = false;
+            resetButton.Visible = false;
+            inputButton.Enabled = true;
+            letterTextBox.Enabled = true;
+
             secretWord = GetSecretWord();
             hiddenWord = "";
 
@@ -101,11 +105,46 @@ namespace FinalProject
 
             // clear input box
             letterTextBox.Text = "";
+
+            if (attemptsRemaining == 0)
+            {
+                loseLabel.Text = "you lost! the word was " + secretWord;
+                loseLabel.Visible = true;
+
+                attemptLabel.Visible = false;
+                inputButton.Enabled = false;
+                letterTextBox.Enabled = false;
+                resetButton.Visible = true;
+            }
         }
 
         private void secretWordLabel_Click(object sender, EventArgs e)
         {
             // no action needed when label is clicked
+        }
+
+        private void resetButton_Click(object sender, EventArgs e)
+        {
+            // restart the game
+            secretWord = GetSecretWord();
+            hiddenWord = "";
+            attemptsRemaining = 6;
+
+            for (int i = 0; i < secretWord.Length; i++)
+            {
+                hiddenWord += "_";
+            }
+
+            secretWordLabel.Text = hiddenWord;
+            attemptLabel.Text = "Attempts Remaining: " + attemptsRemaining;
+
+            attemptLabel.Visible = true;
+            loseLabel.Visible = false;
+            resetButton.Visible = false;
+
+            inputButton.Enabled = true;
+            letterTextBox.Enabled = true;
+            letterTextBox.Text = "";
         }
     }
 }
