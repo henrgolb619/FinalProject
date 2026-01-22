@@ -14,7 +14,7 @@ namespace FinalProject
     {
         string secretWord;
         string hiddenWord;
-        int attemptsRemaining = 6; // starting guesses
+        int attemptsRemaining = 7; // starting guesses
 
 
         public Form2()
@@ -52,10 +52,15 @@ namespace FinalProject
         string GetSecretWord()
         {
             // list of words for hangman
-            string[] words = { "computer","notebook","student","programming",
-                "science","teacher","library","mountain","adventure","holiday",
-                "electricity","information","technology","imagination","environment"
-            };
+            string[] words = {   
+                "computer","notebook","student","programming","science","teacher","library",
+                "mountain","adventure","holiday","electricity","information","technology",
+                "imagination","environment",
+                "education","engineering","chemistry","mathematics","geography","astronomy",
+                "literature","philosophy","psychology","architecture","transportation",
+                "communication","organization","civilization","responsibility"
+};
+
 
             // pick a random index
             Random random = new Random();
@@ -108,7 +113,7 @@ namespace FinalProject
 
             if (attemptsRemaining == 0)
             {
-                loseLabel.Text = "you lost! the word was " + secretWord;
+                loseLabel.Text = "You lost! The word was " + secretWord;
                 loseLabel.Visible = true;
 
                 attemptLabel.Visible = false;
@@ -116,6 +121,20 @@ namespace FinalProject
                 letterTextBox.Enabled = false;
                 resetButton.Visible = true;
             }
+
+            // check if player has guessed the whole word
+            if (hiddenWord == secretWord)
+            {
+                loseLabel.Text = "You won! The word was " + secretWord;
+                loseLabel.Visible = true;
+
+                attemptLabel.Visible = false;
+                inputButton.Enabled = false;
+                letterTextBox.Enabled = false;
+                resetButton.Visible = true;
+                resetButton.Text = "Play Again";
+            }
+            
         }
 
         private void secretWordLabel_Click(object sender, EventArgs e)
