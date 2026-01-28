@@ -137,11 +137,6 @@ namespace FinalProject
             
         }
 
-        private void secretWordLabel_Click(object sender, EventArgs e)
-        {
-            // no action needed when label is clicked
-        }
-
         private void resetButton_Click(object sender, EventArgs e)
         {
             // restart the game

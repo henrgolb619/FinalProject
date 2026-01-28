@@ -53,7 +53,7 @@
             secretWordLabel.Size = new Size(539, 86);
             secretWordLabel.TabIndex = 1;
             secretWordLabel.TextAlign = ContentAlignment.MiddleCenter;
-            secretWordLabel.Click += secretWordLabel_Click;
+            //secretWordLabel.Click += secretWordLabel_Click;
             // 
             // letterTextBox
             // 
